@@ -13,9 +13,9 @@ query RunInput {
                 product {
                     id
                     handle
-
-                    hasTags(tags: []) {
-                    tag
+                    metafield(namespace: "payment-customization",
+                    key: "function-configuration") {
+                    value
                     }
                 }
             }
