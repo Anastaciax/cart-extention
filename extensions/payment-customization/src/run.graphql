@@ -1,0 +1,29 @@
+query RunInput {
+    cart {
+        cost {
+        totalAmount {
+        amount
+        }
+    }
+    lines {
+        merchandise {
+        __typename
+            ...on ProductVariant {
+            id
+                product {
+                    id
+                    handle
+
+                    hasTags(tags: []) {
+                    tag
+                    }
+                }
+            }
+        }
+    }
+  }
+  paymentMethods {
+    id
+    name
+  }
+}
